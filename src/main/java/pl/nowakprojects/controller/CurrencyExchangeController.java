@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pl.nowakprojects.dto.CurrencyDTO;
 
+import java.math.BigDecimal;
 import java.util.Currency;
 
 /**
@@ -12,6 +14,8 @@ import java.util.Currency;
  */
 
 @RestController
+//@Controller
+//@ResponseBody
 public class CurrencyExchangeController {
 
     @RequestMapping("/multiply/{number}")
@@ -40,9 +44,26 @@ public class CurrencyExchangeController {
             throw new RuntimeException("Something is no yes");
         }
 
-
     }
 
 
+    //Example: http://localhost:8090/multiplierCurrency/10/2?from=PLN&to=USD
+    //Whohoho, super, zwraca obiekt w JSON!
+    @RequestMapping("multiplierCurrency/{value}/{multiplier}")
+    public CurrencyDTO currencyDTOMultiplier(@PathVariable Long value,
+                                             @PathVariable Long multiplier,
+                                             @RequestParam("from") String from,
+                                             @RequestParam("to") String to){
+
+        Currency currencyFrom, currencyTo;
+        try{
+            currencyFrom = Currency.getInstance(from);
+            currencyTo = Currency.getInstance(to);
+        }catch (IllegalArgumentException e){
+            throw new RuntimeException("Something is no yes");
+        }
+
+        return new CurrencyDTO(BigDecimal.valueOf(value*multiplier),currencyTo);
+    }
 
 }
