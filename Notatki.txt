@@ -1,0 +1,1 @@
+Poczytac o context, to to samo co context we wzorcu Strategia. Context Pattern

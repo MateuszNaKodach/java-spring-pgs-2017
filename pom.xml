@@ -3,10 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+
+	<!---<scm>
+		<url>https://github.com/nowakprojects/java-spring-pgs-2017</url>
+		<connection>scm:git:git://github.com/nowakprojects/java-spring-pgs-2017.git</connection>
+		<developerConnection>scm:git:git@github.com:nowakprojects/java-spring-pgs-2017.git</developerConnection>
+		<tag>MEETING3</tag>
+	</scm>-->
+
 	<groupId>pl.nowakprojects</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+
 
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
