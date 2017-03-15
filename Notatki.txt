@@ -1,1 +1,8 @@
+Zadanie domowe:
+    z pogody zrobic cos na waluty.
+    Serwis do wymiany walut, controlelr w ktorym 3 endpointy, kazdy uzywa innego podejscia (jeden wrapowanie na jsona), drugi
+    response entity, trzeci obiekt ze statusem modyfikowanym, FAJNIE, zeby response byl modyfikowany w serwisie!!!!, bo tam jest modyfikowany
+    kiedy kod waluty jest nipoprawny, to nie tylko zwracamy wyjatek, ale modyfikujemy response status na 400 lub 404)
+
+
 Poczytac o context, to to samo co context we wzorcu Strategia. Context Pattern

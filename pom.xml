@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 
-	<!---<scm>
+	<scm>
 		<url>https://github.com/nowakprojects/java-spring-pgs-2017</url>
 		<connection>scm:git:git://github.com/nowakprojects/java-spring-pgs-2017.git</connection>
 		<developerConnection>scm:git:git@github.com:nowakprojects/java-spring-pgs-2017.git</developerConnection>
 		<tag>MEETING3</tag>
-	</scm>-->
+	</scm>
 
 	<groupId>pl.nowakprojects</groupId>
 	<artifactId>demo</artifactId>
@@ -84,6 +84,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-release-plugin</artifactId>
+			<version>2.5.3</version>
+		</plugin>
+
 		</plugins>
 	</build>
 
